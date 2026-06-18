@@ -22,6 +22,11 @@ async function connectDB() {
 }
 connectDB();
 
+// Root endpoint agar frontend bisa connect
+app.get('/', (req, res) => {
+    res.send('API is running');
+});
+
 // ==========================================
 //  Endpoint Wajib dari Instruksi Tugas
 // ==========================================
