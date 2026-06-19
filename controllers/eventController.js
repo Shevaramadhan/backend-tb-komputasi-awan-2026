@@ -7,7 +7,8 @@ const getAllEvents = async (req, res) => {
         res.json({
             status: "success",
             message: "Data retrieved successfully",
-            data: events
+            data: events,
+            items: events // Tambahan untuk mengatasi bug pada frontend asisten
         });
     } catch (error) {
         res.status(500).json({ status: "error", message: error.message });
